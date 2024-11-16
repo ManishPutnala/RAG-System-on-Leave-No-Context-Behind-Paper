@@ -8,7 +8,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 # Load the embedding model
 gemini_key = open(gemini_key.txt)
-embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="AIzaSyDHrcs-vLsRTxHv_92avnbNqY6VDcIC6yQ", 
+embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="GEMINI_API_KEY", 
                                                model="models/embedding-001")
 
 # Setting a Connection with the ChromaDB
@@ -30,7 +30,7 @@ chat_template = ChatPromptTemplate.from_messages([
 ])
 
 # Initialize chat model
-chat_model = ChatGoogleGenerativeAI(google_api_key="AIzaSyC2Bztff9XtDCDrCJfMJ8py9JaT8VkwSlY", 
+chat_model = ChatGoogleGenerativeAI(google_api_key="GEMINI_API_KEY", 
                                     model="gemini-1.5-pro-latest")
 
 # Initialize output parser
